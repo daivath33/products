@@ -113,6 +113,7 @@ const ProductDetails = (props) => {
 };
 
 ProductDetails.propTypes = {
+  images: PropTypes.array.isRequired,
   brand: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   color: PropTypes.string.isRequired,
