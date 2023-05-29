@@ -1,15 +1,14 @@
 import { useState } from "react";
-import Button from "../UI/Button/Button";
-import SocialIcons from "../UI/SocialIcons/SocialIcons";
 import {
   AiOutlineLeft,
   AiOutlineRight,
   AiOutlinePlus,
   AiOutlineMinus,
 } from "react-icons/ai";
-import { FaRegStar, FaStar } from "react-icons/fa";
-import "./ProductDetails.css";
 import Rating from "../UI/Rating/Rating";
+import Button from "../UI/Button/Button";
+import SocialIcons from "../UI/SocialIcons/SocialIcons";
+import "./ProductDetails.css";
 
 const ProductDetails = (props) => {
   const [count, setCount] = useState(1);
@@ -49,7 +48,6 @@ const ProductDetails = (props) => {
         </div>
         <div className="product-content">
           <h5 className="product-brand"> {props.brand}</h5>
-
           <h5 className="product-title">{props.title}</h5>
           <Rating />
           <div className="product-price">
@@ -57,24 +55,23 @@ const ProductDetails = (props) => {
               Price: <span>{props.price.toFixed(2)} €</span>
             </p>
           </div>
-
           <div className="product-details">
             <h2>about this item: </h2>
             <p>{props.description}</p>
-
             <ul>
-              <li>
+              <li className="color">
                 Color: <span>{props.color}</span>
               </li>
-              <li>
+              <li className="size">
                 Size: <span>{props.size}</span>
+              </li>
+              <li className="category">
+                Category: <span>{props.category}</span>
               </li>
               <li>
                 Available: <span>in stock {props.stock} items</span>
               </li>
-              <li>
-                Category: <span>{props.category}</span>
-              </li>
+
               <li>
                 Delivery time: <span>3-4 working days</span>
               </li>
