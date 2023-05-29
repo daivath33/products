@@ -46,54 +46,66 @@ const ProductDetails = (props) => {
             <AiOutlineRight />
           </p>
         </div>
-        <div className="product-content">
-          <h5 className="product-brand"> {props.brand}</h5>
-          <h5 className="product-title">{props.title}</h5>
-          <Rating />
-          <div className="product-price">
-            <p className="price">
-              Price: <span>{props.price.toFixed(2)} €</span>
-            </p>
+        {props.stock === 0 && (
+          <div className="not-available">
+            <h1>Product is sold out</h1>
+            <p>We can notify you as soon as the item is back in stock.</p>
+            <Button
+              title="Remind me when it's on sale again."
+              variant="btn-black"
+            />
           </div>
-          <div className="product-details">
-            <h2>about this item: </h2>
-            <p>{props.description}</p>
-            <ul>
-              <li className="color">
-                Color: <span>{props.color}</span>
-              </li>
-              <li className="size">
-                Size: <span>{props.size}</span>
-              </li>
-              <li className="category">
-                Category: <span>{props.category}</span>
-              </li>
-              <li>
-                Available: <span>in stock {props.stock} items</span>
-              </li>
-
-              <li>
-                Delivery time: <span>3-4 working days</span>
-              </li>
-              <li>
-                Delivery price: <span>from 0.00 €</span>
-              </li>
-            </ul>
-          </div>
-          <div className="btn-group">
-            <div className="count-btns">
-              <button className="btn-count" onClick={decrease}>
-                <AiOutlineMinus />
-              </button>
-              <p className="count">{count}</p>
-              <button className="btn-count" onClick={increase}>
-                <AiOutlinePlus />
-              </button>
+        )}
+        {props.stock > 0 && (
+          <div className="product-content">
+            <h5 className="product-brand"> {props.brand}</h5>
+            <h5 className="product-title">{props.title}</h5>
+            <Rating />
+            <div className="product-price">
+              <p className="price">
+                Price: <span>{props.price.toFixed(2)} €</span>
+              </p>
             </div>
-            <Button title="Add to Cart" />
+            <div className="product-details">
+              <h2>about this item: </h2>
+              <p>{props.description}</p>
+              <ul>
+                <li className="color">
+                  Color: <span>{props.color}</span>
+                </li>
+                <li className="size">
+                  Size: <span>{props.size}</span>
+                </li>
+                <li className="category">
+                  Category: <span>{props.category}</span>
+                </li>
+                <li>
+                  Available: <span>in stock {props.stock} items</span>
+                </li>
+
+                <li>
+                  Delivery time: <span>3-4 working days</span>
+                </li>
+                <li>
+                  Delivery price: <span>from 0.00 €</span>
+                </li>
+              </ul>
+            </div>
+            <div className="btn-group">
+              <div className="count-btns">
+                <button className="btn-count" onClick={decrease}>
+                  <AiOutlineMinus />
+                </button>
+                <p className="count">{count}</p>
+                <button className="btn-count" onClick={increase}>
+                  <AiOutlinePlus />
+                </button>
+              </div>
+              <Button title="Add tp Cart" variant="btn-gold" />
+            </div>
+            <SocialIcons />
           </div>
-          <SocialIcons />
-        </div>
+        )}
       </div>
     </div>
   );

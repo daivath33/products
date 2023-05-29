@@ -1,11 +1,25 @@
 .button {
   font-size: 1rem;
-  padding: 10px 100px;
+  padding: 10px 50px;
+  box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px,
+    rgba(17, 17, 26, 0.1) 0px 0px 8px;
+}
+
+.btn-black {
+  border: 2px solid black;
+  background-color: black;
+  color: #fff;
+}
+.btn-black:hover {
+  color: black;
+  background-color: #fff;
+}
+.btn-gold {
   border: 2px solid #cea600;
   background-color: #cea600;
-  color: #ffffff;
+  color: #fff;
 }
-.button:hover {
+.btn-gold:hover {
   background-color: #d9b111;
   border: 2px solid #d9b111;
 }
