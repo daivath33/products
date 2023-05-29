@@ -1,0 +1,146 @@
+.card-wrapper {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+img {
+  display: block;
+}
+.img-item {
+  background-color: #f1f3f5;
+}
+
+.img-item:hover {
+  opacity: 0.8;
+}
+.product-imgs {
+  position: relative;
+}
+.product-imgs .slide-btn {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background-color: #f8f9fa;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  border-radius: 50%;
+  font-size: 2rem;
+  color: #868e96;
+}
+.product-imgs .left {
+  top: 50%;
+  left: -10px;
+}
+.product-imgs .right {
+  top: 50%;
+  right: -10px;
+}
+.product-content {
+  padding: 2rem 1rem;
+}
+
+.product-brand {
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: #343a40;
+}
+.product-title {
+  font-size: 1.4rem;
+  text-transform: capitalize;
+  font-weight: 500;
+  position: relative;
+  color: #495057;
+  margin: 0.5rem 0;
+}
+
+.product-rating {
+  color: #ffc107;
+}
+.product-rating span {
+  font-weight: 600;
+  color: #343a40;
+}
+.product-price {
+  margin: 1rem 0;
+  font-size: 1rem;
+  font-weight: 700;
+}
+.price span {
+  color: #9c0000;
+  font-weight: 600;
+}
+
+.count-btns,
+.btn-group {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.count-btns {
+  margin-right: 1rem;
+}
+.btn-count,
+.count {
+  padding: 5px;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid gray;
+  border-radius: 2px;
+  background-color: #fff;
+}
+.product-details {
+  margin: 3rem 0;
+}
+.product-details h2 {
+  text-transform: capitalize;
+  color: #12263a;
+  padding-bottom: 0.6rem;
+}
+.product-details p {
+  font-size: 0.9rem;
+  padding: 0.3rem;
+  opacity: 0.8;
+}
+.product-details ul {
+  margin: 1rem 0;
+  font-size: 0.9rem;
+}
+.product-details ul li {
+  margin: 0;
+  list-style: none;
+  padding-left: 1.7rem;
+  margin: 0.4rem 0;
+  font-weight: 600;
+  opacity: 0.9;
+}
+.product-details ul li span {
+  font-weight: 400;
+  text-transform: capitalize;
+}
+
+@media screen and (min-width: 992px) {
+  .card {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1.5rem;
+  }
+  .card-wrapper {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .product-imgs {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .product-content {
+    padding-top: 0;
+  }
+}

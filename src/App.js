@@ -1,5 +1,11 @@
+import SocialIcons from "./components/UI/SocialIcons/SocialIcons";
+
 function App() {
-  return <div className="App">Product Details</div>;
+  return (
+    <div>
+      <SocialIcons />
+    </div>
+  );
 }
 
 export default App;
