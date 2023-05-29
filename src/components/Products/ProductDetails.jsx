@@ -1,4 +1,5 @@
 import { useState } from "react";
+import PropTypes from "prop-types";
 import {
   AiOutlineLeft,
   AiOutlineRight,
@@ -109,6 +110,17 @@ const ProductDetails = (props) => {
       </div>
     </div>
   );
+};
+
+ProductDetails.propTypes = {
+  brand: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  color: PropTypes.string.isRequired,
+  price: PropTypes.number.isRequired,
+  size: PropTypes.string.isRequired,
+  category: PropTypes.string.isRequired,
+  stock: PropTypes.number.isRequired,
+  description: PropTypes.string.isRequired,
 };
 
 export default ProductDetails;
