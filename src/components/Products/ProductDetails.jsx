@@ -101,7 +101,7 @@ const ProductDetails = (props) => {
                   <AiOutlinePlus />
                 </button>
               </div>
-              <Button title="Add tp Cart" variant="btn-gold" />
+              <Button title="Add to Cart" variant="btn-gold" />
             </div>
             <SocialIcons />
           </div>
