@@ -9,6 +9,7 @@ import {
 } from "react-icons/ai";
 import { FaRegStar, FaStar } from "react-icons/fa";
 import "./ProductDetails.css";
+import Rating from "../UI/Rating/Rating";
 
 const ProductDetails = (props) => {
   const [count, setCount] = useState(1);
@@ -49,23 +50,15 @@ const ProductDetails = (props) => {
         <div className="product-content">
           <h5 className="product-brand"> {props.brand}</h5>
 
-          <h5 class="product-title">{props.title}</h5>
-          <div class="product-rating">
-            <FaStar />
-            <FaStar />
-            <FaStar />
-            <FaStar />
-            <FaRegStar />
-            <span>4.7(12)</span>
-          </div>
-
-          <div class="product-price">
-            <p class="price">
+          <h5 className="product-title">{props.title}</h5>
+          <Rating />
+          <div className="product-price">
+            <p className="price">
               Price: <span>{props.price.toFixed(2)} €</span>
             </p>
           </div>
 
-          <div class="product-details">
+          <div className="product-details">
             <h2>about this item: </h2>
             <p>{props.description}</p>
 
@@ -91,7 +84,7 @@ const ProductDetails = (props) => {
             </ul>
           </div>
           <div className="btn-group">
-            <div class="count-btns">
+            <div className="count-btns">
               <button className="btn-count" onClick={decrease}>
                 <AiOutlineMinus />
               </button>
@@ -102,6 +95,7 @@ const ProductDetails = (props) => {
             </div>
             <Button title="Add to Cart" />
           </div>
+          <SocialIcons />
         </div>
       </div>
     </div>

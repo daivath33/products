@@ -1,0 +1,7 @@
+.product-rating {
+  color: #ffc107;
+}
+.product-rating span {
+  font-weight: 600;
+  color: #343a40;
+}

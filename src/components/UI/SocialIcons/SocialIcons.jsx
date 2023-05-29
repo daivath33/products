@@ -9,7 +9,7 @@ import "./SocialIcons.css";
 
 const SocialIcons = () => {
   return (
-    <div class="social-links">
+    <div className="social-links">
       <p>Share At: </p>
       <a href="https://www.facebook.com/">
         <FaFacebookF />
